@@ -1,0 +1,66 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SummerCountdown.MainPage"
+             BackgroundColor="#E0F7FA">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="25" VerticalOptions="Center">
+
+            <!-- Летняя картинка -->
+            <Image Source="summer_banner.jpg" 
+                   HeightRequest="180" 
+                   Aspect="AspectFill" 
+                   HorizontalOptions="Center" />
+
+            <Label Text="☀️ До лета осталось: ☀️" 
+                   FontSize="26" 
+                   FontAttributes="Bold"
+                   TextColor="#00695C" 
+                   HorizontalOptions="Center" />
+
+            <!-- Блок с таймером в летних тонах -->
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto" ColumnSpacing="15" RowSpacing="15">
+
+                <!-- Месяцы -->
+                <VerticalStackLayout Grid.Row="0" Grid.Column="0" BackgroundColor="#FFFFFF" Padding="15">
+                    <Label x:Name="MonthsLabel" Text="0" FontSize="32" FontAttributes="Bold" TextColor="#00897B" HorizontalOptions="Center" />
+                    <Label Text="Месяцев" FontSize="14" TextColor="#004D40" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <!-- Недели -->
+                <VerticalStackLayout Grid.Row="0" Grid.Column="1" BackgroundColor="#FFFFFF" Padding="15">
+                    <Label x:Name="WeeksLabel" Text="0" FontSize="32" FontAttributes="Bold" TextColor="#00897B" HorizontalOptions="Center" />
+                    <Label Text="Недель" FontSize="14" TextColor="#004D40" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <!-- Дни -->
+                <VerticalStackLayout Grid.Row="1" Grid.Column="0" BackgroundColor="#FFFFFF" Padding="15">
+                    <Label x:Name="DaysLabel" Text="0" FontSize="32" FontAttributes="Bold" TextColor="#00897B" HorizontalOptions="Center" />
+                    <Label Text="Дней" FontSize="14" TextColor="#004D40" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <!-- Часы -->
+                <VerticalStackLayout Grid.Row="1" Grid.Column="1" BackgroundColor="#FFFFFF" Padding="15">
+                    <Label x:Name="HoursLabel" Text="0" FontSize="32" FontAttributes="Bold" TextColor="#00897B" HorizontalOptions="Center" />
+                    <Label Text="Часов" FontSize="14" TextColor="#004D40" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <!-- Минуты -->
+                <VerticalStackLayout Grid.Row="2" Grid.Column="0" BackgroundColor="#FFFFFF" Padding="15">
+                    <Label x:Name="MinutesLabel" Text="0" FontSize="32" FontAttributes="Bold" TextColor="#00897B" HorizontalOptions="Center" />
+                    <Label Text="Минут" FontSize="14" TextColor="#004D40" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <!-- Секунды -->
+                <VerticalStackLayout Grid.Row="2" Grid.Column="1" BackgroundColor="#FFFFFF" Padding="15">
+                    <Label x:Name="SecondsLabel" Text="0" FontSize="32" FontAttributes="Bold" TextColor="#00897B" HorizontalOptions="Center" />
+                    <Label Text="Секунд" FontSize="14" TextColor="#004D40" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+    
